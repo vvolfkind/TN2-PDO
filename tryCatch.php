@@ -1,5 +1,4 @@
 <?php
-echo '<pre>';
 
 function mysqlConnection($host, $db_name, $db_user, $db_pass, $port = null)
 {
