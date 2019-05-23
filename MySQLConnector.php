@@ -35,4 +35,3 @@ class Connector
 
 }
 
-var_dump(Connector::make('localhost', 'movies_db', 'root', '', '3306'));
