@@ -1,4 +1,5 @@
 <?php
+echo '<pre>';
 
 function mysqlConnection($host, $db_name, $db_user, $db_pass, $port = null)
 {
@@ -24,8 +25,18 @@ function mysqlConnection($host, $db_name, $db_user, $db_pass, $port = null)
 
     }
 }
+
 // $host, $db_name, $db_user, $db_pass, $port = null
 $pdo = mysqlConnection('localhost', 'movies_db', 'root', '', '3306');
-var_dump($pdo);
+
+$query = $pdo->prepare("SELECT * FROM movies");
+
+$query->execute();
+
+$peliculas = $query->fetchAll(PDO::FETCH_ASSOC);
+
+var_dump($peliculas);
 exit;
+
+
 
