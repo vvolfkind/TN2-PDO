@@ -22,7 +22,8 @@ class MySQL
             return $pdo;
 
         } catch (PDOException $e) {
-            die('No pude conectarme' . $e->getMessage());
+           // die('No pude conectarme' . $e->getMessage());
+           echo 'NO ANDA';
         }
     }
 }

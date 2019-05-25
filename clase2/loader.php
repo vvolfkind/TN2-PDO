@@ -11,7 +11,8 @@ $mi_username = "root";
 $mi_password = "";
 // END PARAMETROS
 
-$pdo = MuSQL::connect($mi_host, $mi_base_de_datos, $mi_username, $mi_password, $mi_puerto);
+$pdo = MySQL::connect($mi_host, $mi_base_de_datos, $mi_username, $mi_password, $mi_puerto);
 
 
 //dd($pdo);
+

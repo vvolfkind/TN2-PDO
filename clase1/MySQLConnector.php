@@ -15,7 +15,8 @@ class Connector
                 return $pdo;
 
             } catch (PDOException $e) {
-                die('No pude conectarme' . $e->getMessage());
+                //die('No pude conectarme' . $e->getMessage());
+                die('Error');
             }
         }
         $dsn = 'mysql:host=' . $host . ';dbname=' . $db_name;
@@ -28,8 +29,8 @@ class Connector
             return $db;
 
         } catch (PDOException $e) {
-            die('No pude conectarme' . $e->getMessage());
-
+            //die('No pude conectarme' . $e->getMessage());
+                die('Error');
 
         }
 
